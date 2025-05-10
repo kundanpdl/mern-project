@@ -8,6 +8,7 @@ A fullstack (MERN stack) project with basic CRUD implications.
 
 - React
 - ChakraUI
+- Zustand
 
 **_Backend_**:
 
@@ -65,4 +66,14 @@ Install ChakraUI (Note: This is the version 2 of ChakraUI and not the latest one
 
 ```bash
 npm i @chakra-ui/react@2 @emotion/react @emotion/styled framer-motion
+```
+
+Install ChakraUI icons and React icons:
+
+```bash
+npm i @chakra-ui/icons
+```
+
+```bash
+npm i react-icons
 ```
