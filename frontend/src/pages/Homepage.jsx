@@ -19,7 +19,7 @@ const Homepage = () => {
           fontSize={{ base: "28", sm: "33" }}
           fontWeight="extrabold"
         >
-          Current Items
+          All Items
         </Text>
 
         <SimpleGrid

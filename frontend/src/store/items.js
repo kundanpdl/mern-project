@@ -37,4 +37,19 @@ export const useItemsStore = create((set) => ({
     }));
     return { success: true, message: "Item Deleted Successfully" };
   },
+  updateItem: async (id, updatedItem) => {
+    const res = await fetch(`/api/products/${id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(updatedItem),
+    });
+    const data = await res.json();
+    if (!data.success) return { success: false, message: data.message };
+    set((state) => ({
+      items: state.items.map((item) => (item._id === id ? data.data : item)),
+    }));
+    return { success: true, message: "Item Updated Successfully" };
+  },
 }));
