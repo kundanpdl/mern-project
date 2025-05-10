@@ -100,7 +100,7 @@ OR
 cd ..
 ```
 
-Dependending on which directory you are in currently. If you want to check which directory you are in currently, you can use:
+Depending on which directory you are in currently. If you want to check which directory you are in, you can use:
 
 ```bash
 ls
@@ -122,3 +122,15 @@ npm run dev
 ```
 
 You should be able to run the application locally now and access it via http://localhost:5173. (Note: The port number 5173 is generally used while deploying the frontend of the application locally. In case the port number is different, you can check your terminal and access the one displayed. Same thing in case of backend server as well, it is generally 8000 if available, or the one displayed on your console.)
+
+On a final note, .env file with URI for MongoDB is not included in this repository due to security issues. You will need to create a MongoDB cluster and create your own .env file. It should look something like:
+
+```bash
+MONGO_URI=<your mongodb connection string>
+```
+
+Your connection string should have collection name set to 'products' right before the '?'. For example:
+
+```bash
+MONGO_URI=mongodb+srv://<username>:<password>@<clusterName>.uga6frq.mongodb.net/<tableName>?retryWrites=true&w=majority&appName=<clusterName>
+```
