@@ -12,7 +12,9 @@ app.use(express.json());
 // Using productRoutes from the productRoutes.js file to handle all the requests
 app.use("/api/products", productRoutes);
 
-app.listen(8000, () => {
+const PORT = process.env.PORT || 8000;
+
+app.listen(PORT, () => {
   connectDB();
-  console.log("Server running on port 8000");
+  console.log("Server running on port: ", PORT);
 });

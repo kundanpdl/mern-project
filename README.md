@@ -1,13 +1,16 @@
-***📋 Overview*** :
+**_📋 Overview_** :
 
 A fullstack (MERN stack) project with basic CRUD implications.
 
 ## 📦 Tech Stack
+
 **Frontend**:
+
 - React
 - ChakraUI
-  
-***Backend***:
+
+**_Backend_**:
+
 - Node.js
 - Express.js
 - MongoDB
@@ -16,9 +19,11 @@ A fullstack (MERN stack) project with basic CRUD implications.
 ## 🛠️ Installation & Setup
 
 ### 1. Clone the Repository
+
 ```bash
 git clone https://github.com/kundanpdl/todolist-react.git
 ```
+
 ```bash
 cd todolist-react
 ```
@@ -26,14 +31,38 @@ cd todolist-react
 ### 2. Install Backend Dependencies
 
 Make sure you have Node.js installed and run:
-a) In root folder:
+In root folder:
+
 ```bash
 npm init -y
 ```
+
 ```bash
 npm install mongoose express dotenv
 ```
+
 ```bash
 npm install nodemon -D
 ```
+
 (-D is used to make nodemon a dev dependency, as it is not needed in prod.)
+
+### 3. Install Frontend Dependencies
+
+First get in correct folder:
+
+```bash
+cd frontend
+```
+
+Then run:
+
+```bash
+npm create vite@latest .
+```
+
+Install ChakraUI (Note: This is the version 2 of ChakraUI and not the latest one.):
+
+```bash
+npm i @chakra-ui/react@2 @emotion/react @emotion/styled framer-motion
+```

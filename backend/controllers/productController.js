@@ -39,7 +39,7 @@ export const updateProduct = async (req, res) => {
 
   // Check if the id is valid using mongoose.Types.ObjectId.isValid method. If not, send 404 error
   if (!mongoose.Types.ObjectId.isValid(id)) {
-    return res.status(400).json({ success: false, message: "Invalid ID" });
+    return res.status(404).json({ success: false, message: "Invalid ID" });
   }
   try {
     // The new:true option is used to return the updated document instead of the original document
@@ -57,6 +57,9 @@ export const updateProduct = async (req, res) => {
 export const deleteProduct = async (req, res) => {
   // We get id from the request prameters. It is equivalent to const id = req.params.id;
   const { id } = req.params;
+  if (!mongoose.Types.ObjectId.isValid(id)) {
+    return res.status(404).json({ success: false, message: "Invalid ID" });
+  }
   try {
     // Wait for the product to be deleted using the id and findByIdAndDelete method
     await Product.findByIdAndDelete(id);
