@@ -2,6 +2,9 @@
 
 A fullstack (MERN stack) project with basic CRUD implications.
 
+## Live Demo: ###
+https://mern-project-qtj7.onrender.com
+
 ## 📦 Tech Stack
 
 **Frontend**:
